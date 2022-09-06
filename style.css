@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@300&family=Khand:wght@300&family=Nanum+Gothic&family=Playfair+Display&display=swap');
+
+*::-webkit-scrollbar{
+	width: 15px;
+	background-color: rgba(218,233,242,.5)
+}
+
+*::-webkit-scrollbar-thumb{
+	background-color: rgb(140, 140, 140);
+	border-radius: 10px;
+
+}
+
+.img{
+	max-width: 100%;
+	height: 100%;
+}
+
+.complete_header .TopHeader{
+	align-items: center;
+	height: 170px;
+	border-top-color: transparent;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    position: relative;
+}
+
+.complete_header .img{
+	position: absolute;
+	left:50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.container-fluid .navbar-toggler{
+	background: none;
+	color: transparent;
+	border:none;
+}
+.navbar-collapse .navbar-nav,{
+	list-style: none;
+	margin:none;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: var(--grid-margin);
+	display: inline-flex;
+	transition: right 0.6 s;
+	border-bottom: 1.8px solid rgb(224, 224, 224);
+}
+
+.navbar .nav-item, .footer a{
+	overflow-x: auto;
+	text-transform: uppercase;
+	width: max-content;
+	margin: 0 20px;
+	line-height: 50px;
+	font-family: 'Inconsolata', monospace;
+	font-size: 40px;
+    font-weight: 150px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: black;
+}
+
+.navbar .nav-item:hover{
+	text-decoration-color: rgb(224, 224, 224); 
+}
+
+.navbar{
+	border-bottom: 1.8px solid rgb(224, 224, 224);
+}
+
+/*END NAVBAR*/
+
+.title{
+	text-transform: uppercase;
+	padding: 0px;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 40px;
+}
+
+.title-text{
+	font-size: 60px;
+	padding-top: 10px;
+	text-align: center;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.container {
+	width: 90%;
+	margin: 50px auto;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.container::after {
+	content: "";
+	width: 2px;
+	height: 100%;
+	background: #1b3231;
+	position: absolute;
+	top: 0;
+	left: calc(50% - 1px);
+	z-index: 1;
+}
+
+.evento {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.evento::after {
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-radius: 100px;
+	background: black;
+	border: 2px solid black;
+	position: absolute;
+	z-index: 2;
+	top: calc(50% - 2px);
+	left: calc(50% - 7px);
+}
+
+.date {
+	text-align: center;
+	justify-content: start;
+	width: calc(42% + 20px);
+	font-size: 32px;
+	padding-top: 20px;
+}
+
+.photo{
+	width: 30%;
+	border: 10px solid #fff;
+	position: relative;
+	box-shadow: black 0px 7px 29px 0px;
+}
+
+.photo::after {
+	content: "";
+	display: block;
+	border: 20px solid transparent;
+	border-left: 20px solid #fff;
+	position: absolute;
+	right: -50px;
+	top: calc(50% - 20px);
+}
+
+.photo img{
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.evento:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.evento:nth-child(even) .date {
+	justify-content: end;
+}
+
+.evento:nth-child(even) .photo::after {
+	content: "";
+	border: 20px solid transparent;
+	border-right: 20px solid #fff;
+	right: initial;
+	left: -50px;
+}
+
+.text{
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+
+.section{
+	height: 100%;
+	width: 100%;
+	padding-top: 30px;
+}
+
+.section1{
+	padding: 20px 80px;
+}
+
+.section .saludo{
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 70px;
+}
+
+.section .parrafo{
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 20px;
+	padding: 20px 40px;
+	padding-bottom: 0px;
+}
+
+.section2-W{
+	display: grid;
+	grid-template-columns: 80% 20%;
+	text-align: center;
+}
+
+.section2{
+	display: grid;
+	grid-template-columns: 20% 80%;
+	text-align: center;
+	padding: 10px;
+}
+
+.sticky-top{
+	position: sticky;
+	top:0;
+	text-align: center;
+}
+
+.sticky-top::before {
+	content: "";
+	height: 100%;
+	width: 80%;
+	position: absolute;
+	background-color: rgb(173,173,173,0.7);
+	z-index: -1;
+	transform: rotate(6deg);
+	left:10%;
+	top:0;
+}
+
+.sticky-top::after {
+	content: "";
+	height: 100%;
+	width: 80%;
+	position: absolute;
+	background-color: rgb(240,240,240,0.7);
+	z-index: -1;
+	transform: rotate(-6deg);
+	left:10%;
+	top:0;
+}
+
+.section .part-title{
+	font-family: 'Inconsolata', monospace;
+	text-transform: uppercase;
+	height: 100%;
+	width: 100%;
+}
+
+.part-title h2{
+	font-weight: bolder;
+	transition: right 0.7 s;
+}
+
+.section .left-title{
+	font-family: 'Inconsolata', monospace;
+	text-transform: uppercase;
+	height: 100%;
+	width: 100%;
+	padding-top: 25%;
+	background:url(photos/Background.png);
+
+}
+
+.left-title h2{
+	font-weight: bolder;
+	padding-left: 60%;
+	transition: right 0.7 s;
+}
+
+.section2-1{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+}
+
+.infor{
+	padding-top: 30px;
+}
+
+.photo-aboutme img{
+	width: 70%;
+	height: 70%;
+	max-height: 300px;
+	max-width: 300px;
+	border: 10px solid #fff;
+	position: relative;
+	box-shadow: black 0px 7px 20px 0px;
+}
+
+/*FOOTER*/
+.footer .main-footer{
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 10px;
+	padding: 20px;
+}
+
+.main-footer .mini-navbar{
+	color:white;
+	text-transform: uppercase;
+	padding: 15px;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.main-footer h4{
+	font-size: 40px;
+	font-size: 20px;
+}
+
+.social-media{
+	padding-top: 10%;
+}
+
+.social-media .img{
+	height: 40px;
+	transition: right 0.4 s;
+}
+
+.social-media .img:hover{
+	transform: scale(1.3);
+}
+
+.social-media a{
+	text-decoration: none;
+	padding-left: 30px;
+}
+
+.main-footer .list-footer{
+	border-bottom: none;
+	list-style:none
+}
+
+.list-footer a{
+	text-decoration: none;
+	transition: right 0.4 s;
+	color:white;
+	text-transform: none;
+	padding-left: 50px;
+	font-size:30px;
+	font-family: 'Inconsolata', monospace;
+	font-weight: 150px;
+}
+
+.list-footer a:hover, .part-title h2:hover{
+	font-size: 40px;
+}
+
+.copyright{
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.copyright .text{
+	font-size: 20px;
+}
+
+@media(max-width: 1200px){
+
+	.navbar-collapse .navbar-nav{
+		border-bottom: none;
+	}
+
+	.container-fluid .navbar-collapse{
+		text-align: center;
+	}
+
+	.navbar .nav-item{
+		margin: 0 10px;
+		line-height: 30px;
+		font-size: 20px;
+    	font-weight: 100px;
+	}
+
+	.title-text{
+		font-size: 30px;
+	}
+
+	.title{
+		font-size: 20px;
+	}
+	.text{
+		font-size: 10px;
+	}
+
+	.section1{
+		padding: 10px 30px;
+	}
+
+	.section .saludo{
+		font-size: 40px;
+	}
+
+	.section .parrafo{
+		font-size: 15px;
+		padding: 10px 10px;
+		padding-bottom: 0px;
+	}
+
+	.photo-aboutme img{
+		width: 80%;
+		height: 80%;
+		border: 5px solid #fff;
+		position: relative;
+		box-shadow: black 0px 3px 10px 0px;
+	}
+
+	.footer .main-footer{
+		background-color: black;
+		height: 100%;
+		width: 100%;
+		margin: auto;
+		grid-template-columns: repeat(1,1fr);
+	}
+
+	.main-footer .logo{
+		height: 30%;
+		width: 70%;
+	}
+
+	.social-media .img{
+		height: 30px;
+	}
+
+	.main-footer h4{
+		font-size: 30px;
+	}
+
+	.list-footer a{
+		font-size:20px;
+	}
+}
