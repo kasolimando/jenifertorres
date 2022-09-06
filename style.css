@@ -257,22 +257,6 @@
 	transition: right 0.7 s;
 }
 
-.section .left-title{
-	font-family: 'Inconsolata', monospace;
-	text-transform: uppercase;
-	height: 100%;
-	width: 100%;
-	padding-top: 25%;
-	background:url(photos/Background.png);
-
-}
-
-.left-title h2{
-	font-weight: bolder;
-	padding-left: 60%;
-	transition: right 0.7 s;
-}
-
 .section2-1{
 	height: 100%;
 	width: 100%;
